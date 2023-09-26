@@ -3,14 +3,49 @@
 <head>
     <title>Salary Calculator</title>
     <div class="header">
-        <h1>Salary Calculator</h1>
+        <h1>Add Employee</h1>
     </div>
 </head>
 
 <body>
-    <table id="example" class="display" style="width:100%">
-            <thead>
-                <tr id="output-table">
+    <div id="salary-container">
+        <label for="first-name">
+            First Name:
+        </label>
+        <input type="text" 
+               id="first-name" 
+               placeholder="First Name">
+        <label for="last-name">
+            Last Name:
+        </label>
+        <input type="text" 
+               id="last-name" 
+               placeholder="Last Name">
+        <label for="id-number">
+            ID Number:
+        </label>
+        <input type="text" 
+               id="id-number" 
+               placeholder="ID Number">
+        <label for="title">
+            Title:
+        </label>
+        <input type="text" 
+                id="title" 
+                placeholder="Title">
+        <label for="annual-salary">
+            Annual Salary:
+        </label>
+        <input type="text" 
+        id="annual-salary" 
+        placeholder="Annual Salary"> 
+
+        <button onclick="addData()">
+              Add
+          </button>
+    </div>
+    <table id="output-table">
+                <tr>
                     <div id="first-name">
                         <th>First Name</th>
                     </div>
@@ -23,22 +58,10 @@
                     <div id="title">  
                         <th>Title</th>
                     </div>
-                    <div> 
+                    <div id="annual-salary"> 
                         <th>Annual Salary</th>
                     </div>
                     <th></th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>    
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><button id="delete">Delete</button></td>
-                </tr>
     </table>
 
 </body>

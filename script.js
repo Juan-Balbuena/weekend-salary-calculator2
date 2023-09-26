@@ -1,5 +1,5 @@
 function addData() {
-    // Get input values
+    
     let firstName =
         document.querySelector("#first-name").value;
     let lastName =
@@ -11,22 +11,30 @@ function addData() {
     let annualSalary = 
         document.querySelector("#annual-salary").value;
     
-    // Get the table and insert a new row at the end
     let table = document.querySelector("#output-table");
     let newRow = table.insertRow(table.rows.length);
     
-    // Insert data into cells of the new row
     newRow.insertCell(0).innerHTML = firstName;
     newRow.insertCell(1).innerHTML = lastName;
     newRow.insertCell(2).innerHTML = idNumber;
     newRow.insertCell(3).innerHTML = title;
     newRow.insertCell(4).innerHTML = annualSalary;
-
-        '<button onclick="editData(this)">Edit</button>'+
+    newRow.insertCell(5).innerHTML =
         '<button onclick="deleteData(this)">Delete</button>';
     
-    // Clear input fields
-    // clearInputs();
+        clearInputs();
 }
 
 console.log(addData);
+
+function deleteData(button) {
+    let row = button.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+function clearInputs() {
+    document.querySelector("#first-name").value = "";
+    document.querySelector("#last-name").value = "";
+    document.querySelector("#id-number").value = "";
+    document.querySelector("title").value = "";
+    document.querySelector("#annual-salary").value = "";
+}
