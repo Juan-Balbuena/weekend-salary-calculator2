@@ -1,5 +1,5 @@
 function addData() {
-    
+
     let firstName =
         document.querySelector("#first-name").value;
     let lastName =
@@ -35,6 +35,15 @@ function clearInputs() {
     document.querySelector("#first-name").value = "";
     document.querySelector("#last-name").value = "";
     document.querySelector("#id-number").value = "";
-    document.querySelector("title").value = "";
+    document.querySelector("#title").value = "";
     document.querySelector("#annual-salary").value = "";
 }
+ function totalMonthly (){
+    let monthlyExpensess =
+    document.querySelector("#annual-salary").value = document.querySelector("#annual-salary").value/12;
+ 
+    let p = document.querySelector("#monthly-salary")
+
+}
+
+ console.log(totalMonthly);

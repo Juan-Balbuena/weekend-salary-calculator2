@@ -1,11 +1,24 @@
 .header {
-text-align: center;
-font-size: 30px;
-color: blue;
+text-align: left;
+font-size: 20px;
+color: black;
 }
 
-.output-table {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
+table {
+    text-align: center;
+    table-layout: auto;
 }
+
+td{
+    text-align: center;
+
+}
+input{
+   text-align: center;
+   
+}
+
+.body{
+    table-layout: auto;
+}
+
