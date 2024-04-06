@@ -1,4 +1,6 @@
-function addData() {
+let totalSalary = 0;
+function addData(event) {
+    event.preventDefault();
 
     let firstName =
         document.querySelector("#first-name").value;
@@ -10,6 +12,12 @@ function addData() {
         document.querySelector("#title").value;
     let annualSalary = 
         document.querySelector("#annual-salary").value;
+
+    totalSalary += Number(annualSalary)
+    
+    let monthlyTotal = document.querySelector('monthly-total') ;
+    monthlyTotal.innerHTML = `Combined Monthly Salary: ${totalSalary/12}`
+       
     
     let table = document.querySelector("#output-table");
     let newRow = table.insertRow(table.rows.length);
@@ -27,6 +35,8 @@ function addData() {
 
 console.log(addData);
 
+
+
 function deleteData(button) {
     let row = button.parentNode.parentNode;
     row.parentNode.removeChild(row);
@@ -38,12 +48,3 @@ function clearInputs() {
     document.querySelector("#title").value = "";
     document.querySelector("#annual-salary").value = "";
 }
- function totalMonthly (){
-    let monthlyExpensess =
-    document.querySelector("#annual-salary").value = document.querySelector("#annual-salary").value/12;
- 
-    let p = document.querySelector("#monthly-salary")
-
-}
-
- console.log(totalMonthly);
