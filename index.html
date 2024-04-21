@@ -12,58 +12,27 @@
 </header>
 
 <body>
-    <div id="salary-container">
-        <label for="first-name">
-            First Name:
-        </label>
-        <input type="text" 
-               id="first-name" 
-               placeholder="First Name">
-        <label for="last-name">
-            Last Name:
-        </label>
-        <input type="text" 
-               id="last-name" 
-               placeholder="Last Name">
-        <label for="id-number">
-            ID Number:
-        </label>
-        <input type="text" 
-               id="id-number" 
-               placeholder="ID Number">
-        <label for="title">
-            Title:
-        </label>
-        <input type="text" 
-                id="title" 
-                placeholder="Title">
-        <label for="annual-salary">
-            Annual Salary:
-        </label>
-        <input type="text" 
-                id="annual-salary"
-                placeholder="Annual Salary"> 
-
-        <button onclick="addData()">
-              Submit
-          </button>
-     </div>
-    <table id="output-table">
-        <tr>
-            <td>First Name</td>
-            <td>Last Name</td>
-            <td>ID</td>
-            <td>Title</td>
-            <td>Annual Salary</td>             
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
-        <p id="monthly-salary">
-
-        </p>
+    <div>
+       
+        
+        <form onSubmit = "addData(event)">
+            
+            <input required placeholder="First Name" type = "text" id = "first-name"/>
+            <input required placeholder="Last Name" type = "text" id = "last-name"/>
+            <input required placeholder="ID" type = "text" id = "id-number"/>
+            <input required placeholder="Title" type = "text" id = "title"/>
+             <input required placeholder="Annual Salary" type = "text" id = "annual-salary"/>
+        
+         <button>
+            Submit
+        </button>
+        </form>
+        
+<div id= "container">
+    <h2>Employees</h2>
+</div>
+<div id="monthly-total"></div>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
